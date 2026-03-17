@@ -83,7 +83,7 @@
     padding: 14px; resize: vertical; outline: none; transition: border-color 0.2s;
     line-height: 1.7; direction: ltr; backdrop-filter: blur(8px);
   }
-  textarea::placeholder { color: #90caf9; opacity: 0.6; }
+  textarea::placeholder { color: #90caf9; opacity: 0.6; direction: rtl; text-align: right; unicode-bidi: plaintext; }
   textarea:focus { border-color: #4fc3f7; box-shadow: 0 0 0 3px rgba(79,195,247,0.2); }
   .row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
   input[type="number"], input[type="text"] {
@@ -129,8 +129,7 @@
   <div class="card" dir="auto">
     <div class="field">
       <label><span class="dot"></span> روابط الحلقات</label>
-      <textarea id="links" dir="rtl" placeholder="ضع الروابط هنا، كل رابط في سطر...https://pixeldrain.com/api/file/xxxxx
-https://pixeldrain.com/api/file/xxxxx" style="direction:rtl;" onfocus="this.style.direction='ltr'" onblur="if(!this.value)this.style.direction='rtl'"></textarea>
+      <textarea id="links" placeholder="ضع الروابط هنا، كل رابط في سطر..." style="direction:ltr; text-align:left;" oninput="this.style.direction='ltr'; this.style.textAlign='left';"></textarea>
     </div>
     <div class="row">
       <div class="field">
@@ -153,9 +152,9 @@ https://pixeldrain.com/api/file/xxxxx" style="direction:rtl;" onfocus="this.styl
     <p class="about-title">ما هو موقع <span>Anime Playlist Generator</span>؟</p>
     <p class="about-text">هو موقع يُتيح تجميع روابط حلقات الأنمي في قائمة تشغيل واحدة بدل فتح رابط كل حلقة على حدة.</p>
     <p class="about-note"><span style="color:#4fc3f7;font-weight:700;">ملاحظة:</span> بعد إنشاء قائمة التشغيل يُنصح باستعمال مشغلات مستقرة ومعتمدة، والمشغل الأمثل هو <span>VLC</span>.</p>
-    <p class="footer">Created by: Louay Hamdi 🇩🇿</p>
   </div>
 
+  <p class="footer">Created by: Louay Hamdi 🇩🇿</p>
 </div>
 <script>
 function generate() {
